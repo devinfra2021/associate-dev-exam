@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+       nodejs: 10
+    commands:
+       - echo "installing nodejs version 10"
+       - echo "it is in progress"
+  pre_build:
+    commands:
+       - echo "we are in pre_build stage and working on the same"
+       - echo "it is in progress"
+  build:
+    commands:
+       - echo "we are on build stage and working on the same"
+       - grep -Fq "Congratulations" index.html
+  post_build:
+    commands:
+       - echo "we are in post_build stage and working on the same"
+       - echo "now, we are done with all stages"
